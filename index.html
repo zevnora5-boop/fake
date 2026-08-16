@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Perfect Fitness Club — premium gym and fitness club in Sector 92, Noida. Personal training, CrossFit, Zumba, Yoga, Weight Training and more.">
+<meta name="keywords" content="Perfect Fitness Club, gym in Noida, gym Sector 92 Noida, fitness club Noida, personal training Noida, CrossFit Noida, Zumba Noida">
+
+<title>Perfect Fitness Club | Sector 92, Noida</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  display:block;
+  width:100%;
+  object-fit:cover;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+:root{
+  --red:#ff3b30;
+  --red2:#ff6a5f;
+  --dark:#080808;
+  --dark2:#111;
+  --panel:#151515;
+  --white:#fff;
+  --muted:#a6a6a6;
+  --line:rgba(255,255,255,.10);
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:100;
+  background:rgba(8,8,8,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:30px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.logo span{
+  color:var(--red);
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  font-size:13px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  color:#ddd;
+}
+
+.nav-links a{
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--red);
+}
+
+.nav-btn{
+  padding:12px 20px;
+  border-radius:4px;
+  background:var(--red);
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.nav-btn:hover{
+  background:#fff;
+  color:#111;
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.76) 40%,
+      rgba(0,0,0,.40) 72%,
+      rgba(0,0,0,.70) 100%
+    ),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=90')
+    center/cover;
+  animation:heroZoom 14s ease-in-out infinite alternate;
+}
+
+.hero-grid{
+  position:absolute;
+  inset:0;
+  opacity:.13;
+  background-image:
+    linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:70px 70px;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding-top:80px;
+  max-width:760px;
+  animation:fadeUp .9s ease both;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.hero-tag i{
+  width:35px;
+  height:2px;
+  display:block;
+  background:var(--red);
+}
+
+h1{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(62px,9vw,118px);
+  line-height:.88;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:-2px;
+}
+
+h1 span{
+  color:var(--red);
+}
+
+.hero-text{
+  max-width:600px;
+  color:#c9c9c9;
+  font-size:16px;
+  margin:28px 0 32px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:15px 23px;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  transition:.25s;
+}
+
+.btn-red{
+  background:var(--red);
+  color:#fff;
+}
+
+.btn-red:hover{
+  background:#fff;
+  color:#111;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+}
+
+.btn-outline:hover{
+  border-color:var(--red);
+  color:var(--red);
+}
+
+.hero-stats{
+  display:flex;
+  gap:42px;
+  margin-top:52px;
+  flex-wrap:wrap;
+}
+
+.hero-stat strong{
+  display:block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:30px;
+  line-height:1;
+}
+
+.hero-stat span{
+  color:#999;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+/* ================= TICKER ================= */
+
+.ticker{
+  background:var(--red);
+  overflow:hidden;
+  white-space:nowrap;
+  border-top:1px solid rgba(255,255,255,.2);
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.ticker-track{
+  display:flex;
+  width:max-content;
+  animation:ticker 24s linear infinite;
+}
+
+.ticker-item{
+  padding:15px 28px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:17px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.ticker-item::after{
+  content:"•";
+  margin-left:28px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+  padding:105px 0;
+}
+
+.eyebrow{
+  color:var(--red);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(45px,6vw,70px);
+  line-height:.95;
+  text-transform:uppercase;
+  font-weight:800;
+}
+
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:48px;
+}
+
+.section-head p{
+  max-width:430px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:#0d0d0d;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.about-image{
+  position:relative;
+  height:570px;
+  overflow:hidden;
+}
+
+.about-image img{
+  height:100%;
+  transition:transform .8s;
+}
+
+.about-image:hover img{
+  transform:scale(1.04);
+}
+
+.image-badge{
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  background:var(--red);
+  padding:18px 22px;
+}
+
+.image-badge strong{
+  display:block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:34px;
+  line-height:1;
+}
+
+.image-badge span{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.about-copy p{
+  color:#aaa;
+  font-size:14px;
+  margin:24px 0;
+  max-width:560px;
+}
+
+.about-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:30px;
+}
+
+.about-point{
+  padding:18px;
+  background:#141414;
+  border-left:2px solid var(--red);
+}
+
+.about-point strong{
+  display:block;
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.about-point span{
+  font-size:11px;
+  color:#888;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:#f3f3f3;
+  color:#111;
+}
+
+.services .section-head p{
+  color:#666;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:#d7d7d7;
+}
+
+.service{
+  position:relative;
+  min-height:210px;
+  padding:30px;
+  background:#f3f3f3;
+  transition:.3s;
+  overflow:hidden;
+}
+
+.service:hover{
+  background:#fff;
+  transform:translateY(-4px);
+}
+
+.service-number{
+  color:#aaa;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px;
+  font-weight:800;
+}
+
+.service-icon{
+  font-size:30px;
+  margin:18px 0 8px;
+}
+
+.service h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:29px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+.service p{
+  color:#666;
+  font-size:12px;
+}
+
+/* ================= FITNESS SPLIT ================= */
+
+.fitness-feature{
+  background:#0a0a0a;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.feature-card{
+  position:relative;
+  height:430px;
+  overflow:hidden;
+}
+
+.feature-card img{
+  height:100%;
+  transition:transform .7s;
+}
+
+.feature-card:hover img{
+  transform:scale(1.06);
+}
+
+.feature-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 30%,rgba(0,0,0,.9));
+}
+
+.feature-content{
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:25px;
+  z-index:2;
+}
+
+.feature-content small{
+  color:#ff8a82;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  font-weight:800;
+}
+
+.feature-content h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:42px;
+  text-transform:uppercase;
+  line-height:1;
+  margin:8px 0;
+}
+
+.feature-content p{
+  color:#ccc;
+  font-size:12px;
+}
+
+/* ================= PROGRAMS ================= */
+
+.programs{
+  background:#121212;
+}
+
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.program{
+  padding:28px;
+  min-height:245px;
+  background:#181818;
+  border:1px solid var(--line);
+  position:relative;
+  transition:.3s;
+}
+
+.program:hover{
+  border-color:var(--red);
+  transform:translateY(-5px);
+}
+
+.program-icon{
+  font-size:30px;
+}
+
+.program h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px;
+  text-transform:uppercase;
+  margin:22px 0 8px;
+}
+
+.program p{
+  color:#888;
+  font-size:12px;
+}
+
+/* ================= RATING ================= */
+
+.rating{
+  background:var(--red);
+}
+
+.rating-wrap{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  align-items:center;
+  gap:70px;
+}
+
+.rating-number{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:110px;
+  line-height:.75;
+  font-weight:900;
+}
+
+.rating-stars{
+  font-size:24px;
+  letter-spacing:5px;
+  margin:14px 0;
+}
+
+.rating-label{
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.rating-copy h2{
+  font-size:clamp(40px,5vw,65px);
+}
+
+.rating-copy p{
+  margin-top:20px;
+  max-width:560px;
+  color:rgba(255,255,255,.78);
+  font-size:14px;
+}
+
+/* ================= TIMINGS ================= */
+
+.timings{
+  background:#0d0d0d;
+}
+
+.timing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.timing-card{
+  background:#151515;
+  padding:35px;
+  border:1px solid var(--line);
+  position:relative;
+}
+
+.timing-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:var(--red);
+}
+
+.timing-card small{
+  color:#888;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+}
+
+.timing-card h3{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:43px;
+  margin:8px 0;
+  text-transform:uppercase;
+}
+
+.timing-card p{
+  color:#999;
+  font-size:12px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:#f3f3f3;
+  color:#111;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:60px;
+}
+
+.contact-copy p{
+  color:#666;
+  font-size:14px;
+  margin:22px 0 28px;
+}
+
+.contact-info{
+  display:grid;
+  gap:13px;
+}
+
+.contact-item{
+  background:#fff;
+  padding:17px;
+  border-left:3px solid var(--red);
+}
+
+.contact-item small{
+  display:block;
+  color:#999;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  margin-bottom:4px;
+}
+
+.contact-item span{
+  font-size:13px;
+  font-weight:600;
+}
+
+.contact-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.form{
+  background:#111;
+  color:#fff;
+  padding:35px;
+}
+
+.form-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:35px;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.field{
+  margin-bottom:14px;
+}
+
+.field label{
+  display:block;
+  color:#aaa;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:7px;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  padding:13px;
+  background:#080808;
+  color:#fff;
+  border:1px solid #292929;
+  outline:none;
+  border-radius:2px;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color:var(--red);
+}
+
+.field textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.status{
+  color:#999;
+  font-size:11px;
+  margin-top:12px;
+}
+
+/* ================= MAP ================= */
+
+.map{
+  margin-top:55px;
+  height:360px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  filter:grayscale(100%) contrast(1.1);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#050505;
+  padding:35px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#666;
+  font-size:11px;
+}
+
+.footer-logo{
+  font-family:'Barlow Condensed',sans-serif;
+  color:#fff;
+  font-size:25px;
+  font-weight:800;
+}
+
+.footer-logo span{
+  color:var(--red);
+}
+
+/* ================= FLOAT BUTTON ================= */
+
+.float-wa{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:90;
+  background:#1fbd6b;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:0 12px 35px rgba(0,0,0,.45);
+  transition:.25s;
+}
+
+.float-wa:hover{
+  transform:translateY(-3px);
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes heroZoom{
+  from{transform:scale(1.02)}
+  to{transform:scale(1.10)}
+}
+
+@keyframes ticker{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+  .nav-inner{
+    height:68px;
+  }
+
+  .nav-links,
+  .nav-btn{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero{
+    min-height:92vh;
+  }
+
+  .hero-content{
+    padding-top:80px;
+  }
+
+  h1{
+    font-size:clamp(58px,18vw,90px);
+  }
+
+  .hero-text{
+    font-size:14px;
+  }
+
+  .hero-stats{
+    gap:25px;
+  }
+
+  section{
+    padding:75px 0;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head p{
+    margin-top:18px;
+  }
+
+  .about-grid,
+  .contact-grid,
+  .rating-wrap{
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+
+  .about-image{
+    height:430px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feature-card{
+    height:360px;
+  }
+
+  .program-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .timing-grid{
+    grid-template-columns:1fr;
+  }
+
+  .rating-number{
+    font-size:90px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .map{
+    height:300px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+}
+
+@media(max-width:520px){
+
+  .container{
+    width:90%;
+  }
+
+  .logo{
+    font-size:25px;
+  }
+
+  .hero-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-points{
+    grid-template-columns:1fr;
+  }
+
+  .program-grid{
+    grid-template-columns:1fr;
+  }
+
+  .program{
+    min-height:190px;
+  }
+
+  .feature-card{
+    height:330px;
+  }
+
+  .feature-content h3{
+    font-size:35px;
+  }
+
+  .form{
+    padding:23px;
+  }
+
+  .float-wa{
+    right:12px;
+    bottom:12px;
+    padding:12px 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <a href="#home" class="logo">
+      Perfect <span>Fitness</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#programs">Programs</a>
+      <a href="#timings">Timings</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a class="nav-btn" href="#contact">
+      Join Now
+    </a>
+
+    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-tag">
+      <i></i>
+      Sector 92 • Noida
+    </div>
+
+    <h1>
+      BUILD<br>
+      <span>YOUR</span><br>
+      BEST.
+    </h1>
+
+    <p class="hero-text">
+      Train stronger. Move better. Feel better.
+      Perfect Fitness Club brings modern equipment,
+      expert trainers and powerful fitness programs
+      together under one roof.
+    </p>
+
+    <div class="buttons">
+
+      <a class="btn btn-red" href="#contact">
+        Start Your Journey →
+      </a>
+
+      <a class="btn btn-outline" href="#services">
+        Explore Training
+      </a>
+
+    </div>
+
+    <div class="hero-stats">
+
+      <div class="hero-stat">
+        <strong>4.9★</strong>
+        <span>Google Rating</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>102+</strong>
+        <span>Reviews</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>7 DAYS</strong>
+        <span>Open Weekly</span>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+
+<!-- TICKER -->
+
+<div class="ticker">
+  <div class="ticker-track">
+
+    <div class="ticker-item">Train Hard</div>
+    <div class="ticker-item">Stay Strong</div>
+    <div class="ticker-item">Move Better</div>
+    <div class="ticker-item">Feel Better</div>
+    <div class="ticker-item">Perfect Fitness Club</div>
+    <div class="ticker-item">Train Hard</div>
+    <div class="ticker-item">Stay Strong</div>
+    <div class="ticker-item">Move Better</div>
+    <div class="ticker-item">Feel Better</div>
+    <div class="ticker-item">Perfect Fitness Club</div>
+
+  </div>
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-image reveal">
+
+      <img
+        src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=90"
+        alt="Modern fitness club interior">
+
+      <div class="image-badge">
+        <strong>4.9★</strong>
+        <span>Rated by Members</span>
+      </div>
+
+    </div>
+
+    <div class="about-copy reveal">
+
+      <div class="eyebrow">Why Perfect Fitness Club</div>
+
+      <h2>More Than<br>A Gym.</h2>
+
+      <p>
+        Perfect Fitness Club is a modern fitness destination in
+        Sector 92, Noida, designed for people who want to train
+        with better equipment, better guidance and a supportive
+        fitness environment.
+      </p>
+
+      <p>
+        Whether your goal is strength training, better mobility,
+        fitness classes or personal training, our range of programs
+        gives you the flexibility to build a routine that works for you.
+      </p>
+
+      <div class="about-points">
+
+        <div class="about-point">
+          <strong>Modern Equipment</strong>
+          <span>Quality equipment for complete workouts.</span>
+        </div>
+
+        <div class="about-point">
+          <strong>Supportive Coaches</strong>
+          <span>Guidance that keeps your training focused.</span>
+        </div>
+
+        <div class="about-point">
+          <strong>Clean Space</strong>
+          <span>A comfortable environment for every session.</span>
+        </div>
+
+        <div class="about-point">
+          <strong>Expert Trainers</strong>
+          <span>Training support for different fitness goals.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="eyebrow">What We Offer</div>
+        <h2>Train Your Way.</h2>
+      </div>
+
+      <p>
+        From strength and conditioning to group fitness and
+        wellness-focused sessions, choose the training that
+        fits your goals.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service reveal">
+        <span class="service-number">01</span>
+        <div class="service-icon">🏃</div>
+        <h3>Aerobics</h3>
+        <p>Energetic cardio-focused sessions designed to keep you active.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">02</span>
+        <div class="service-icon">🥊</div>
+        <h3>CrossFit</h3>
+        <p>Dynamic functional training combining strength and conditioning.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">03</span>
+        <div class="service-icon">💃</div>
+        <h3>Zumba</h3>
+        <p>Fun dance-based fitness sessions packed with movement and energy.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">04</span>
+        <div class="service-icon">🎵</div>
+        <h3>Dance Fitness</h3>
+        <p>Music-driven workouts that make fitness enjoyable and active.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">05</span>
+        <div class="service-icon">🏋️</div>
+        <h3>Personal Training</h3>
+        <p>Focused training guidance built around your individual goals.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">06</span>
+        <div class="service-icon">🧘</div>
+        <h3>Yoga</h3>
+        <p>Mindful movement, flexibility and balance-focused sessions.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">07</span>
+        <div class="service-icon">💪</div>
+        <h3>Weight Training</h3>
+        <p>Strength-focused training with a variety of gym equipment.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">08</span>
+        <div class="service-icon">🥗</div>
+        <h3>Nutrition</h3>
+        <p>Nutrition consulting to support your overall fitness journey.</p>
+      </div>
+
+      <div class="service reveal">
+        <span class="service-number">09</span>
+        <div class="service-icon">🚴</div>
+        <h3>Cycling</h3>
+        <p>Cardio sessions designed to improve endurance and conditioning.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEATURED TRAINING -->
+
+<section class="fitness-feature">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="eyebrow">Train Strong</div>
+        <h2>Find Your<br>Power.</h2>
+      </div>
+
+      <p>
+        Focused training experiences for strength, conditioning,
+        movement and complete fitness.
+      </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+      <div class="feature-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=90"
+          alt="Weight training workout">
+
+        <div class="feature-content">
+          <small>Strength</small>
+          <h3>Weight Training</h3>
+          <p>Build strength with focused resistance training.</p>
+        </div>
+
+      </div>
+
+
+      <div class="feature-card reveal">
+
+        <img
+          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=90"
+          alt="Personal training workout">
+
+        <div class="feature-content">
+          <small>Guidance</small>
+          <h3>Personal Training</h3>
+          <p>Train with focused guidance and structured workouts.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs" id="programs">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="eyebrow">Fitness Programs</div>
+        <h2>Move. Sweat.<br>Progress.</h2>
+      </div>
+
+      <p>
+        A diverse range of fitness activities helps you keep your
+        workouts fresh, challenging and enjoyable.
+      </p>
+
+    </div>
+
+
+    <div class="program-grid">
+
+      <div class="program reveal">
+        <div class="program-icon">🥊</div>
+        <h3>CrossFit</h3>
+        <p>Functional movements and conditioning for a demanding workout.</p>
+      </div>
+
+      <div class="program reveal">
+        <div class="program-icon">💃</div>
+        <h3>Zumba</h3>
+        <p>Dance-inspired fitness sessions full of energy and movement.</p>
+      </div>
+
+      <div class="program reveal">
+        <div class="program-icon">🧘</div>
+        <h3>Yoga</h3>
+        <p>Improve flexibility, balance and mindful movement.</p>
+      </div>
+
+      <div class="program reveal">
+        <div class="program-icon">🚴</div>
+        <h3>Cycling</h3>
+        <p>Cardio-focused cycling sessions for endurance and fitness.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- RATING -->
+
+<section class="rating">
+
+  <div class="container rating-wrap">
+
+    <div class="reveal">
+
+      <div class="rating-number">4.9</div>
+
+      <div class="rating-stars">
+        ★★★★★
+      </div>
+
+      <div class="rating-label">
+        Google Rating • 102 Reviews
+      </div>
+
+    </div>
+
+    <div class="rating-copy reveal">
+
+      <div class="eyebrow" style="color:#fff">
+        Member Experience
+      </div>
+
+      <h2>
+        A Place To<br>
+        Keep Moving.
+      </h2>
+
+      <p>
+        Members highlight the supportive coaches, professional
+        trainers, clean environment and modern equipment at
+        Perfect Fitness Club.
+      </p>
+
+      <div style="margin-top:25px">
+
+        <a
+          class="btn"
+          style="background:#fff;color:#111"
+          href="https://www.google.com/maps/search/?api=1&query=Perfect%20Fitness%20Club%20B-228%20Block%20B%20Sector%2092%20Noida"
+          target="_blank"
+          rel="noopener">
+          ⭐ View Google Reviews
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TIMINGS -->
+
+<section class="timings" id="timings">
+
+  <div class="container">
+
+    <div class="section-head reveal">
+
+      <div>
+        <div class="eyebrow">Open Every Day</div>
+        <h2>Your Time.<br>Your Training.</h2>
+      </div>
+
+      <p>
+        Perfect Fitness Club is open Monday through Sunday
+        with morning and evening training shifts.
+      </p>
+
+    </div>
+
+
+    <div class="timing-grid">
+
+      <div class="timing-card reveal">
+
+        <small>Morning Shift</small>
+
+        <h3>5:30 AM — 12:00 PM</h3>
+
+        <p>
+          Start your day with an energizing workout session.
+        </p>
+
+      </div>
+
+
+      <div class="timing-card reveal">
+
+        <small>Evening Shift</small>
+
+        <h3>4:00 PM — 10:00 PM</h3>
+
+        <p>
+          Train after work, school or your daily schedule.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="container contact-grid">
+
+    <div class="contact-copy reveal">
+
+      <div class="eyebrow">Start Today</div>
+
+      <h2>
+        Ready To<br>
+        Get Stronger?
+      </h2>
+
+      <p>
+        Contact Perfect Fitness Club to ask about training,
+        classes, personal training and membership information.
+      </p>
+
+
+      <div class="contact-actions">
+
+        <a
+          class="btn btn-red"
+          href="tel:+919999153327">
+          📞 Call Now
+        </a>
+
+        <a
+          class="btn"
+          style="background:#111;color:#fff"
+          href="https://wa.me/919999153327?text=Hello%20Perfect%20Fitness%20Club%2C%20I%20would%20like%20to%20know%20more%20about%20the%20gym."
+          target="_blank"
+          rel="noopener">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <small>Phone / WhatsApp</small>
+          <span>099991 53327</span>
+        </div>
+
+        <div class="contact-item">
+          <small>Address</small>
+          <span>
+            B-228, Block B, Sector 92, Noida,
+            Uttar Pradesh 201304
+          </span>
+        </div>
+
+        <div class="contact-item">
+          <small>Opening Days</small>
+          <span>Monday – Sunday</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <form class="form reveal" onsubmit="submitForm(event)">
+
+      <div class="form-title">
+        Send An Enquiry
+      </div>
+
+      <div class="form-row">
+
+        <div class="field">
+          <label>Your Name</label>
+          <input
+            required
+            id="name"
+            type="text"
+            placeholder="Enter your name">
+        </div>
+
+        <div class="field">
+          <label>Phone Number</label>
+          <input
+            required
+            id="phone"
+            type="tel"
+            placeholder="Enter phone number">
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>Interested In</label>
+
+        <input
+          id="interest"
+          type="text"
+          placeholder="Personal Training / Zumba / Gym / Yoga">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>Your Message</label>
+
+        <textarea
+          id="message"
+          placeholder="Tell us what you would like to know..."></textarea>
+
+      </div>
+
+
+      <button class="btn btn-red" type="submit">
+        Send On WhatsApp →
+      </button>
+
+      <div class="status" id="formStatus"></div>
+
+    </form>
+
+  </div>
+
+
+  <!-- MAP -->
+
+  <div class="container">
+
+    <div class="map reveal">
+
+      <iframe
+        loading="lazy"
+        src="https://www.google.com/maps?q=Perfect%20Fitness%20Club%20B-228%20Block%20B%20Sector%2092%20Noida%20Uttar%20Pradesh%20201304&output=embed"
+        title="Perfect Fitness Club location">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      <div class="footer-logo">
+        Perfect <span>Fitness</span>
+      </div>
+
+      <div style="margin-top:5px">
+        Fitness Club • Sector 92, Noida
+      </div>
+    </div>
+
+    <div>
+      © 2026 Perfect Fitness Club. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="float-wa"
+  href="https://wa.me/919999153327?text=Hello%20Perfect%20Fitness%20Club%2C%20I%20would%20like%20to%20know%20more%20about%20your%20gym."
+  target="_blank"
+  rel="noopener">
+  💬 WhatsApp
+</a>
+
+<script>
+
+/* ================= WHATSAPP ================= */
+
+const BUSINESS_WHATSAPP = "91########";
+
+
+function submitForm(e){
+
+  e.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const interest =
+    document.getElementById("interest").value.trim();
+
+  const message =
+    document.getElementById("message").value.trim();
+
+
+  const text =
+    "Hello Perfect Fitness Club!%0A%0A" +
+    "*New Website Enquiry*%0A%0A" +
+    "Name: " +
+    encodeURIComponent(name) +
+    "%0A" +
+    "Phone: " +
+    encodeURIComponent(phone) +
+    "%0A" +
+    "Interested In: " +
+    encodeURIComponent(interest) +
+    "%0A" +
+    "Message: " +
+    encodeURIComponent(message);
+
+
+  document.getElementById("formStatus").textContent =
+    "Opening WhatsApp…";
+
+
+  const url =
+    "https://wa.me/" +
+    BUSINESS_WHATSAPP +
+    "?text=" +
+    text;
+
+
+  window.open(url,"_blank");
+
+}
+
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+  const links =
+    document.querySelector(".nav-links");
+
+  if(links.style.display === "flex"){
+
+    links.style.display = "none";
+
+  }else{
+
+    links.style.display = "flex";
+    links.style.position = "absolute";
+    links.style.top = "68px";
+    links.style.left = "0";
+    links.style.right = "0";
+    links.style.padding = "24px";
+    links.style.background = "#080808";
+    links.style.flexDirection = "column";
+    links.style.gap = "20px";
+    links.style.borderBottom =
+      "1px solid rgba(255,255,255,.1)";
+
+  }
+
+}
+
+
+/* Close mobile menu after clicking */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+  link.addEventListener("click",function(){
+
+    if(window.innerWidth <= 850){
+
+      document.querySelector(".nav-links")
+      .style.display = "none";
+
+    }
+
+  });
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer =
+  new IntersectionObserver(
+
+    function(entries){
+
+      entries.forEach(function(entry){
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("visible");
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.10
+    }
+
+  );
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(function(element){
+
+  observer.observe(element);
+
+});
+
+
+/* ================= CURRENT YEAR ================= */
+
+document.querySelectorAll("footer")
+.forEach(function(footer){
+
+  footer.innerHTML =
+    footer.innerHTML.replace(
+      "2026",
+      new Date().getFullYear()
+    );
+
+});
+
+</script>
+
+</body>
+</html>
